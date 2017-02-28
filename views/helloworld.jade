@@ -1,0 +1,28 @@
+html
+    head
+      title=title
+      link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    body
+      div.container
+        div.jumbotron
+          h1 Hai!
+
+          if user
+            p Welcome, #{user.fullName}
+            p
+              a.small(href="profile") Edit my profile
+            form(action='/logout', method='POST')
+              button.btn.btn-default(type="submit") Logout
+          else
+            p Selamat datang di profilku, berikut sekilas :)
+            p
+              b.glyphicon.glyphicon-user  NadyaPrabaningrum
+            p
+              b.glyphicon.glyphicon-map-marker  Universitas Gadjah Mada
+            p
+              b.glyphicon.glyphicon-book  Komputer dan Sistem Informasi
+            p
+              b.glyphicon.glyphicon-bookmark  2015
+            p
+
+              a.small(href="https://www.github.com/nadpr") Ingin belajar lebih lanjut mengenai Chat Bot dengan para seniornya, dan berharap semoga dapat sharing ilmu yang telah didapat pada workshop ini ke teman-teman insyaAllah.
